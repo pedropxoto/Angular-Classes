@@ -1,0 +1,43 @@
+<h1 class="text-success text-center">app works!</h1>
+<div [ngStyle]="{background:count<5?'green':'blue'}"
+[ngClass]="{custom:count>4}"
+>
+  <h2 class="text-center">Contador:{{count}} </h2>
+</div>
+
+
+<h2 *ngIf="count>7;else menor">
+O contador passou de 7
+</h2>
+
+<ng-template #menor>
+<h2>Contador é menor ou igual a 7</h2>
+</ng-template>
+
+<ul [ngSwitch]="count" class="list-group mx-auto">
+  <li class="list-group-item"
+  *ngSwitchCase="1"
+  >1</li>
+  <li class="list-group-item"
+  *ngSwitchCase="2">2</li>
+  <li class="list-group-item"
+  *ngSwitchCase="3">3</li>
+  <li class="list-group-item"
+  *ngSwitchCase="4">4</li>
+  <li class="list-group-item"
+  *ngSwitchDefault>default</li>
+</ul>
+
+
+
+<button class ="btn btn-success" (click) = "clicou('Pedro')">Clique</button>
+
+<div class="col-4 mx-auto">
+<input type="text" class="form-control" placeholder="Digite alguma coisa" [(ngModel)] = "text">
+<h4>Saída: {{text}} </h4>
+</div>
+
+<h3 appMarcaTexto corDeFundo="blue" corDeTexto="orange">{{nome}}</h3>
+
+<h2>LISTA DE PERSONAGENS:</h2>
+<app-list-ap></app-list-ap>

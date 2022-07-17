@@ -1,0 +1,13 @@
+<section class="d-flex align-items-center justify-content-between flex-wrap">
+    <div class="card mx-1 my-1" style="width: 18rem;" *ngFor="let pessoa of personagens">
+        <img class="card-img-top" [src]="pessoa.image" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">{{pessoa.name}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">pessoa.status</li>
+          <li class="list-group-item">pessoa.species</li>
+        </ul>
+    </div>
+</section>
